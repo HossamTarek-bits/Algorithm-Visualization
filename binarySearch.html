@@ -6,8 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 	<title>Binary Search</title>
-	<!-- Importing Fallback MathML For Older Browsers -->
-	<script src="https://fred-wang.github.io/mathml.css/mspace.js"></script>
+	<!-- Importing Mathjax -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
 	<!-- Bootstrap css -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
 		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
@@ -104,84 +104,16 @@
 			</div>
 			<div class="analysis col-md-6 col-12">
 				<h4>Analysis</h4>
-				<p>The equation for the recursive algorithm is:</p>
-				<math xmlns="http://www.w3.org/1998/Math/MathML">
-					<mi>T</mi>
-					<mo>(</mo>
-					<mi>n</mi>
-					<mo>)</mo>
-					<mo>=</mo>
-					<mi>T</mi>
-					<mo>(</mo>
-					<mfrac>
-						<mi>n</mi>
-						<mn>2</mn>
-					</mfrac>
-					<mo>)</mo>
-					<mo>+</mo>
-					<mi>C</mi>
-				</math>
-				<p>at each recursive call the array size is divided in half and the work done outside the recursion call
-					is constant which is calculating the middle index.</p>
-				<p>using master theorm where:</p>
-				<math xmlns="http://www.w3.org/1998/Math/MathML">
-					<mi>a</mi>
-					<mo>=</mo>
-					<mn>1</mn>
-					<mspace linebreak="newline" />
-					<mi>b</mi>
-					<mo>=</mo>
-					<mn>2</mn>
-				</math>
-				<p>Then:</p>
-				<math xmlns="http://www.w3.org/1998/Math/MathML">
-					<mi>f</mi>
-					<mo>(</mo>
-					<mi>n</mi>
-					<mo>)</mo>
-					<mo>=</mo>
-					<mn>1</mn>
-				</math>
-				<br>
-				<math xmlns="http://www.w3.org/1998/Math/MathML">
-					<msup>
-						<mi>n</mi>
-						<mrow>
-							<msub>
-								<mi>log</mi>
-								<mi>b</mi>
-							</msub>
-							<mfenced>
-								<mi>a</mi>
-							</mfenced>
-						</mrow>
-					</msup>
-					<mo>=</mo>
-					<msup>
-						<mi>n</mi>
-						<mrow>
-							<msub>
-								<mi>log</mi>
-								<mn>2</mn>
-							</msub>
-							<mfenced>
-								<mn>1</mn>
-							</mfenced>
-						</mrow>
-					</msup>
-					<mo>=</mo>
-					<mn>1</mn>
-				</math>
-				<p>which means the complexity of the algorthim is </p>
-				<math xmlns="http://www.w3.org/1998/Math/MathML">
-					<mi>&#x3B8;</mi>
-					<mo>(</mo>
-					<mi>log</mi>
-					<mfenced>
-						<mi>n</mi>
-					</mfenced>
-					<mo>)</mo>
-				</math>
+				<p>The equation for the recursive algorithm is: `T(n)=T(n/2)+C` <br>
+					at each recursive call the array size is divided in half and the work done outside the recursion
+					call
+					is constant which is calculating the middle index.<br>
+					using master theorm where: `a=1,b=2` <br>
+					Then: `f(n)=1`<br>
+					`n^(log_b a)=n^(log_2 1)=1` <br>
+					which means the complexity of the algorthim is <br>
+					`Theta(logn)`
+				</p>
 			</div>
 		</div>
 	</div>

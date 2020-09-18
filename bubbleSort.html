@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Bubble Sort</title>
-    <!-- Importing Fallback MathML For Older Browsers -->
-    <script src="https://fred-wang.github.io/mathml.css/mspace.js"></script>
+    <!-- Importing Mathjax -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
     <!-- Bootstrap css -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
@@ -94,58 +94,10 @@
                     for the first iteration the inner loop gets repeated n times. <br>
                     for the second iteration the inner loop gets repeated n-1 times. <br>
                     and so on until the final iteration the inner loop is done only once.<br>
-                    so the inner loop gets done<span>
-                        <math xmlns="http://www.w3.org/1998/Math/MathML">
-                            <mi>n</mi>
-                            <mo>,</mo>
-                            <mi>n</mi>
-                            <mo>-</mo>
-                            <mn>1</mn>
-                            <mo>,</mo>
-                            <mi>n</mi>
-                            <mo>-</mo>
-                            <mn>2</mn>
-                            <mo>,</mo>
-                            <mo>.</mo>
-                            <mo>.</mo>
-                            <mo>.</mo>
-                            <mo>,</mo>
-                            <mn>1</mn>
-                        </math></span><br>
-                    solving the arthmitic series
-                </p>
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-                    <munderover>
-                        <mo class="sum">&#x2211;</mo>
-                        <mrow>
-                            <mi>i</mi>
-                            <mo>=</mo>
-                            <mn>1</mn>
-                        </mrow>
-                        <mi>n</mi>
-                    </munderover>
-                    <mi>i</mi>
-                    <mo>=</mo>
-                    <mfrac>
-                        <mrow>
-                            <mi>n</mi>
-                            <mo>(</mo>
-                            <mi>n</mi>
-                            <mo>+</mo>
-                            <mn>1</mn>
-                            <mo>)</mo>
-                        </mrow>
-                        <mn>2</mn>
-                    </mfrac>
-                </math>
-                <p>thus the time complexity for the algorithm is</p>
-                <math xmlns="http://www.w3.org/1998/Math/MathML">&#x3B8;<mo>(</mo>
-                    <msup>
-                        <mi>n</mi>
-                        <mn>2</mn>
-                    </msup>
-                    <mo>)</mo>
-                </math>
+                    so the inner loop gets done `n,n-1,n-2,...,1` <br>
+                    solving the arthmitic series `sum_(i=1)^n i=(n(n+1))/2` <br>
+                    thus the time complexity for the algorithm is `Theta(n^2)` <br>
+            </p>
             </div>
         </div>
     </div>
