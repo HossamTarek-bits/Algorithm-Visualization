@@ -1,0 +1,202 @@
+/*
+Color Palette
+#f9f7f7;
+#dbe2ef;
+#3f72af;
+#112d4e;
+#0e253f;
+
+Fonts
+font-family: "Roboto", sans-serif;
+font-family: 'Dancing Script', cursive;
+font-family: 'Roboto Mono', monospace;
+
+*/
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #112d4e;
+    background-image: url("../images/background.png");
+    color: #f9f7f7;
+}
+
+/* SideNav CSS */
+
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    overflow-x: hidden;
+    padding-top: 10px;
+    text-align: left;
+}
+
+#Home {
+    padding-bottom: 5%;
+    text-align: center;
+    font-weight: 500;
+}
+
+.card-header,
+.card-body,
+.card-header button,
+.nav-link {
+    padding-left: 3px;
+    color: #dbe2ef;
+}
+.card-header {
+    background-color: #0e253f;
+}
+.card-body {
+    background-color: #112d4e;
+    padding-left: 1.5rem;
+    padding-right: 3px;
+}
+.card {
+    background-color: transparent;
+    color: #dbe2ef;
+    text-align: left;
+    margin: auto 3px 3px;
+    border-width: 0;
+}
+
+.card-header button {
+    font-weight: 700;
+}
+
+.active .nav-link {
+    color: #f9f7f7;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+/* ---------- */
+
+.content{
+    margin-left: 160px; /* Same as the width of the sidenav */
+    background-color: transparent;
+    border: 0;
+}
+
+.btn-link:hover,
+.nav-link:hover {
+    text-decoration-style: none;
+    color: #f9f7f7;
+}
+
+.btn{
+    color: #dbe2ef;
+}
+
+.form-control {
+    background-color: #f9f7f7;
+}
+.input-group {
+    padding-left: 0;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+input {
+    width: 10rem;
+    height: 1.65rem;
+    font-size: 1rem;
+}
+.start {
+    color: #f9f7f7;
+    padding-left: 5%;
+    width: 24px;
+    height: 24px;
+}
+
+
+/* JSAV CSS */
+
+
+#container{
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 15px 10px;
+    background-color: transparent;
+    border: 0;
+}
+
+
+.jsavcanvas,
+.jsavarray {
+    width: inherit;
+    height: inherit;
+}
+
+.jsavnode {
+    background-color: #f9f7f7;
+}
+
+.jsavline div {
+    color: #f9f7f7 !important;
+}
+
+.jsavindexlabel {
+    padding-top: 4px;
+    color: #dbe2ef;
+}
+
+.jsavpointer .jsavpointerarea {
+    border-width: 0;
+    border-color: transparent;
+}
+
+.jsavcontrols span {
+    border-width: 0;
+    background-color: #3f72af;
+    color: #f9f7f7;
+}
+
+/* ---------- */
+
+.explanation{
+    margin: 0.7%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #0e253f;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1rem;
+}
+
+.code{
+    border-right: 3px #dbe2ef;
+}
+
+.analysis,.code{
+    display: inline-block;
+}
+
+.analysis p{
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+}
+
+.analysis h4,.code h4{
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+}
+
+.sum{
+    width: fit-content;
+}
+
+mfrac{
+    text-align: center;
+}

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<title>Binary Search</title>
+	<!-- Importing Fallback MathML For Older Browsers -->
+	<script src="https://fred-wang.github.io/mathml.css/mspace.js"></script>
+	<!-- Bootstrap css -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+	<!-- Google Fonts -->
+	<link
+		href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto+Mono:ital@1&family=Roboto+Slab&family=Roboto:wght@400;700&display=swap"
+		rel="stylesheet" />
+	<!-- JASV CSS -->
+	<link rel="stylesheet" href="css/JSAV.css" />
+	<!-- General CSS -->
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+	<!-- Navigation -->
+	<div class="sidenav sticky">
+		<h5 id="Home"><a class="nav-link" href="index.html">Home</a></h5>
+		<div id="accordion">
+			<div class="card">
+				<div class="card-header" id="headingOne">
+					<h5 class="mb-auto">
+						<button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+							aria-expanded="true" aria-controls="collapseOne">
+							Searching
+						</button>
+					</h5>
+				</div>
+
+				<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+					<div class="card-body">
+						<ul class="navbar-nav mr-auto">
+							<li class="nav-item active">
+								<a class="nav-link" href="#">Binary Search<span class="sr-only">(current)</span></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" id="headingTwo">
+					<h5 class="mb-0">
+						<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+							aria-expanded="false" aria-controls="collapseTwo">
+							Sorting
+						</button>
+					</h5>
+				</div>
+				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+					<div class="card-body">
+						<ul class="navbar-nav mr-auto">
+							<li class="nav-item">
+								<a class="nav-link" href="bubbleSort.html">Bubble Sort</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Visulization -->
+	<div class="content">
+		<div id="container">
+			<h1>Binary Search</h1>
+			<p>Enter the number you want to search for</p>
+			<div class="col-6 col-lg-3 input-group mb-3">
+				<input type="text" id="requiredNumber" class="form-control" placeholder="Number in the array" />
+				<div class="input-group-append">
+					<button class="btn btn-outline-secondary startButton" type="button">Start
+						<img src="images/play-button.png" class="start" alt="play-button" />
+					</button>
+				</div>
+			</div>
+			<p class="jsavoutput jsavline"></p>
+			<div class="jsavcanvas"></div>
+			<div class="jsavcontrols"></div>
+		</div>
+		<div class="explanation row">
+			<div class="code col-md-6 col-12">
+				<h4>Algorithm</h4>
+				<p>
+					binarySearch(x,arr,left,right)<br>
+					&nbsp;&nbsp;&nbsp;&nbsp; middle = (left + right)/2 <br>
+					&nbsp;&nbsp;&nbsp;&nbsp; if(left > right) <br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return -1 <br>
+					&nbsp;&nbsp;&nbsp;&nbsp; else if(arr[middle]
+
+					< x) <br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return binarySearch(x,arr,middle+1,right) <br>
+						&nbsp;&nbsp;&nbsp;&nbsp; else if(arr[middle] > x) <br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return binarySearch(x,arr,left,middle-1) <br>
+						&nbsp;&nbsp;&nbsp;&nbsp; else <br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return middle <br>
+				</p>
+			</div>
+			<div class="analysis col-md-6 col-12">
+				<h4>Analysis</h4>
+				<p>The equation for the recursive algorithm is:</p>
+				<math xmlns="http://www.w3.org/1998/Math/MathML">
+					<mi>T</mi>
+					<mo>(</mo>
+					<mi>n</mi>
+					<mo>)</mo>
+					<mo>=</mo>
+					<mi>T</mi>
+					<mo>(</mo>
+					<mfrac>
+						<mi>n</mi>
+						<mn>2</mn>
+					</mfrac>
+					<mo>)</mo>
+					<mo>+</mo>
+					<mi>C</mi>
+				</math>
+				<p>at each recursive call the array size is divided in half and the work done outside the recursion call
+					is constant which is calculating the middle index.</p>
+				<p>using master theorm where:</p>
+				<math xmlns="http://www.w3.org/1998/Math/MathML">
+					<mi>a</mi>
+					<mo>=</mo>
+					<mn>1</mn>
+					<mspace linebreak="newline" />
+					<mi>b</mi>
+					<mo>=</mo>
+					<mn>2</mn>
+				</math>
+				<p>Then:</p>
+				<math xmlns="http://www.w3.org/1998/Math/MathML">
+					<mi>f</mi>
+					<mo>(</mo>
+					<mi>n</mi>
+					<mo>)</mo>
+					<mo>=</mo>
+					<mn>1</mn>
+				</math>
+				<br>
+				<math xmlns="http://www.w3.org/1998/Math/MathML">
+					<msup>
+						<mi>n</mi>
+						<mrow>
+							<msub>
+								<mi>log</mi>
+								<mi>b</mi>
+							</msub>
+							<mfenced>
+								<mi>a</mi>
+							</mfenced>
+						</mrow>
+					</msup>
+					<mo>=</mo>
+					<msup>
+						<mi>n</mi>
+						<mrow>
+							<msub>
+								<mi>log</mi>
+								<mn>2</mn>
+							</msub>
+							<mfenced>
+								<mn>1</mn>
+							</mfenced>
+						</mrow>
+					</msup>
+					<mo>=</mo>
+					<mn>1</mn>
+				</math>
+				<p>which means the complexity of the algorthim is </p>
+				<math xmlns="http://www.w3.org/1998/Math/MathML">
+					<mi>&#x3B8;</mi>
+					<mo>(</mo>
+					<mi>log</mi>
+					<mfenced>
+						<mi>n</mi>
+					</mfenced>
+					<mo>)</mo>
+				</math>
+			</div>
+		</div>
+	</div>
+	<!-- Importing Jquery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- Importing Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+	</script>
+	<!-- Importing Bootstrap -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+		integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+	</script>
+	<!-- Importing Jquery-UI -->
+	<script src="js/jquery-ui.min.js"></script>
+	<!-- Importing Jquery-transit -->
+	<script src="js/jquery.transit.js"></script>
+	<!-- Importing Raphael -->
+	<script src="js/raphael.js"></script>
+	<!-- Importing JSAV Library -->
+	<script src="js/JSAV.js"></script>
+	<!-- Importing Private JS -->
+	<script src="js/index.js"></script>
+	<!-- Importing Binary-Search -->
+	<script src="js/binarySearch.js"></script>
+</body>
+
+</html>

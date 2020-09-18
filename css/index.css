@@ -1,0 +1,32 @@
+/*
+Color Palette
+#f9f7f7;
+#dbe2ef;
+#3f72af;
+#112d4e;
+
+Fonts
+font-family: "Roboto", sans-serif;
+font-family: 'Dancing Script', cursive;
+font-family: 'Roboto Mono', monospace;
+
+*/
+
+.container {
+    margin-top: 13% !important;
+    text-align: center;
+}
+
+h1 {
+    padding-bottom: 5%;
+    font-family: "Dancing Script", cursive;
+}
+
+a {
+    color: #dbe2ef;
+    font-weight: 100;
+    padding: 2%;
+}
+a:hover {
+    color: #f9f7f7;
+}
